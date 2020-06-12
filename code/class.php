@@ -42,7 +42,7 @@ class GDATTCore {
         define('GDBBPRESSATTACHMENTS_VERSION', $gdd->default_options['version'].'_b'.($gdd->default_options['build'].'_free'));
 
         $this->plugin_path = dirname(dirname(__FILE__)).'/';
-        $this->plugin_url = plugins_url('/gd-bbpress-attachments/');
+        $this->plugin_url = plugins_url('/bbp-attachments/');
 
         define('GDBBPRESSATTACHMENTS_URL', $this->plugin_url);
         define('GDBBPRESSATTACHMENTS_PATH', $this->plugin_path);
@@ -82,8 +82,6 @@ class GDATTCore {
     }
 
     public function load() {
-        load_plugin_textdomain('gd-bbpress-attachments', false, 'gd-bbpress-attachments/languages');
-
         add_action('init', array($this, 'init_thumbnail_size'), 1);
         add_action('init', array($this, 'delete_attachments'));
 

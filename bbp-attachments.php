@@ -7,7 +7,6 @@ Description: Implements attachments upload to the topics and replies in bbPress 
 Version: 4.0.1
 Author: Milan Petrovic
 Author URI: https://www.dev4press.com/
-Text Domain: gd-bbpress-attachments
 
 == Copyright ==
 Copyright 2008 - 2020 Milan Petrovic (email: support@dev4press.com)
