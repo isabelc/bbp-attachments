@@ -1,7 +1,7 @@
 <div id="bbp-attachment-toggle-wrap"><span id="bbp-attachment-toggle"><span>&#128206;  Upload Image</span></span></div>
 <fieldset id="bbp-attachment-upload" class="bbp-form palebg">
 	<p class="bbp-attachments-form">
-		<label for="bbp_topic_tags">Attachments:</label><br/>
+		<label for="d4p_attachment">Attachments:</label><br/>
 		<input type="file" size="40" name="d4p_attachment[]" class="bbp-attachment-field-input"> <a href="#" class="d4p-attachment-remove">Remove</a><br>
 		<a class="d4p-attachment-addfile" href="#">Add another file</a>
 	</p>
