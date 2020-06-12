@@ -16,7 +16,7 @@ if (!isset($tabs[$current])) {
 
 ?>
 <div class="wrap">
-    <h2>GD bbPress Attachments</h2>
+    <h2>bbPress Attachments</h2>
     <div id="icon-upload" class="icon32"><br></div>
     <h2 class="nav-tab-wrapper d4p-tabber-ctrl">
         <?php

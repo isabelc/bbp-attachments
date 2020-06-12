@@ -1,8 +1,7 @@
-=== GD bbPress Attachments ===
+=== bbPress Attachments ===
 Contributors: GDragoN
-Donate link: https://plugins.dev4press.com/gd-bbpress-attachments/
 Version: 4.0.1
-Tags: dev4press, bbpress, attachments, upload, media library, forum, topic, reply, limit, meta
+Tags: bbpress, attachments, upload, media library, forum, topic, reply
 Requires at least: 4.9
 Requires PHP: 5.6
 Tested up to: 5.4
@@ -13,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Implements attachments upload to the topics and replies in bbPress plugin through media library and add additional forum based controls.
 
 == Description ==
-GD bbPress Attachments is an easy to use plugin for WordPress and bbPress for implementing files upload for bbPress Forums topics and replies. You can control file sizes from the main plugin settings panel, or you can change some attachments settings for each forum individually. Currently included features:
+bbPress Attachments is an easy to use plugin for WordPress and bbPress for implementing files upload for bbPress Forums topics and replies. You can control file sizes from the main plugin settings panel, or you can change some attachments settings for each forum individually. Currently included features:
 
 * Attachments are handled through WordPress media library. 
 * Limit the number of files to upload at once.
@@ -30,74 +29,9 @@ GD bbPress Attachments is an easy to use plugin for WordPress and bbPress for im
 * Administration: metabox for settings override for forums.
 * Administration: metabox with attachments list and errors for topics and replies.
 
-= bbPress Plugin Versions =
-GD bbPress Attachments 4.0 supports bbPress 2.5.12 or newer. Older bbPress are no longer supported!
-
-= BuddyPress Support =
-GD bbPress Attachments 4.0 is tested with BuddyPress 5.0 using bbPress for Groups forums. Make sure you enable JavaScript and CSS Settings Always Include option in the plugin settings.
-
-= More free Dev4Press plugins for bbPress =
-* [GD bbPress Tools](https://wordpress.org/plugins/gd-bbpress-tools/) - various expansion tools for forums
-* [GD Topic Polls](https://wordpress.org/plugins/gd-topic-polls/) - add polls to the bbPress topics
-* [GD Power Search](https://wordpress.org/plugins/gd-power-search-for-bbpress/) - add advanced search to the bbPress topics
-
-= Upgrade to GD bbPress Toolbox Pro =
-Pro version contains many more great features:
-
-* Enhanced attachments features
-* Limit file types attachments upload
-* Add custom file types for upload
-* BBCodes editor toolbar
-* Report topics and replies
-* Say thanks to forum members
-* Various SEO features
-* Various privacy features
-* Enable TinyMCE editor
-* Private topics and replies
-* Auto closing of inactive topics
-* Notification email control
-* Show user stats in topics and replies
-* Track new and unread topics
-* Great new responsive admin UI
-* Setup Wizard
-* Forum based settings overrides
-* Improved BuddyPress support
-* 40 BBCodes (including Hide and Spoiler)
-* 19 more Topics Views
-* 9 additional widgets
-* Many great tweaks
-* And much, much more
-
-With more features on the roadmap exclusively for Pro version.
-
-* More information about [GD bbPress Toolbox Pro](https://plugins.dev4press.com/gd-bbpress-toolbox/?utm_source=wporg&utm_medium=link&utm_campaign=gd-bbpress-attachments)
-* Compare [Free vs. Pro Plugin](https://plugins.dev4press.com/gd-bbpress-toolbox/articles/toolbox-pro-vs-free-plugins/?utm_source=wporg&utm_medium=link&utm_campaign=gd-bbpress-attachments)
-* More Premium plugins for bbPress [bbPress Plugins Club](https://bbpress.dev4press.com/?utm_source=wporg&utm_medium=link&utm_campaign=gd-bbpress-attachments)
-
-== Installation ==
-= General Requirements =
-* PHP: 5.6 or newer
-
-= WordPress Requirements =
-* WordPress: 4.9 or newer
-
-= bbPress Requirements =
-* bbPress Plugin: 2.5 or newer
-
-= Basic Installation =
-* Plugin folder in the WordPress plugins folder must be `gd-bbpress-attachments`
-* Upload folder `gd-bbpress-attachments` to the `/wp-content/plugins/` directory
-* Activate the plugin through the 'Plugins' menu in WordPress
-
 == Frequently Asked Questions ==
 = Where can I configure the plugin? =
 Open the Forums menu, and you will see Attachments item there. This will open a panel with global plugin settings.
-
-= Why is Media Library required? =
-All attachments uploads are handled by the WordPress Media Library, and plugin uses native WordPress upload functions. When the file is uploaded it will be available through Media Library. Consult WordPress documentation about Media Library requirements.
-
-= Will this plugin work with standalone bbPress installation? =
-No. This plugin requires the plugin versions of bbPress 2.5 or higher.
 
 = Does this plugin work with bbPress plugin used as sitewide forums for BuddyPress plugin? =
 Yes. But, make sure to enable 'Always Include' option for JavaScript and CSS.

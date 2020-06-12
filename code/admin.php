@@ -41,7 +41,7 @@ class GDATTAdmin {
     }
 
     public function admin_menu() {
-        $this->page_ids[] = add_submenu_page('edit.php?post_type=forum', 'GD bbPress Attachments', __("Attachments", "gd-bbpress-attachments"), GDBBPRESSATTACHMENTS_CAP, 'gdbbpress_attachments', array($this, 'menu_attachments'));
+        $this->page_ids[] = add_submenu_page('edit.php?post_type=forum', 'bbPress Attachments', __("Attachments", "gd-bbpress-attachments"), GDBBPRESSATTACHMENTS_CAP, 'gdbbpress_attachments', array($this, 'menu_attachments'));
 
         $this->admin_load_hooks();
     }

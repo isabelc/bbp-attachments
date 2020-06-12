@@ -1,6 +1,6 @@
 <div class="d4p-information">
     <fieldset>
-        <h3>GD bbPress Attachments <?php echo $options["version"]; ?></h3>
+        <h3>bbPress Attachments <?php echo $options["version"]; ?></h3>
         <?php
 
         $status = ucfirst($options["status"]);
@@ -34,8 +34,8 @@
 
     <fieldset>
         <h3><?php _e("Important Plugin Links", "gd-bbpress-attachments"); ?></h3>
-        <a target="_blank" href="https://plugins.dev4press.com/gd-bbpress-attachments/">GD bbPress Attachments <?php _e("Home Page", "gd-bbpress-attachments"); ?></a><br/>
-        <a target="_blank" href="https://wordpress.org/plugins/gd-bbpress-attachments/">GD bbPress Attachments <?php _e("on", "gd-bbpress-attachments"); ?> WordPress.org</a>
+        <a target="_blank" href="https://plugins.dev4press.com/gd-bbpress-attachments/">bbPress Attachments <?php _e("Home Page", "gd-bbpress-attachments"); ?></a><br/>
+        <a target="_blank" href="https://wordpress.org/plugins/gd-bbpress-attachments/">bbPress Attachments <?php _e("on", "gd-bbpress-attachments"); ?> WordPress.org</a>
         <h3><?php _e("Plugin Support", "gd-bbpress-attachments"); ?></h3>
         <a target="_blank" href="https://support.dev4press.com/forums/forum/plugins-free/gd-bbpress-attachments/"><?php _e("Plugin Support Forum on Dev4Press", "gd-bbpress-attachments"); ?></a><br/>
         <h3><?php _e("Dev4Press Important Links", "gd-bbpress-attachments"); ?></h3>
