@@ -39,8 +39,6 @@ class GDATTCore {
 		}
 
 		define('GDBBPRESSATTACHMENTS_INSTALLED', $gdd->default_options['version'].' Free');
-		define('GDBBPRESSATTACHMENTS_VERSION', $gdd->default_options['version'].'_b'.($gdd->default_options['build'].'_free'));
-
 		$this->plugin_path = dirname(dirname(__FILE__)).'/';
 		$this->plugin_url = plugins_url('/bbp-attachments/');
 

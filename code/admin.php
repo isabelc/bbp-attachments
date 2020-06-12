@@ -28,7 +28,7 @@ class GDATTAdmin {
 		}
 
 		if ($this->admin_plugin) {
-			wp_enqueue_style('gd-bbpress-attachments', GDBBPRESSATTACHMENTS_URL."css/admin.css", array(), GDBBPRESSATTACHMENTS_VERSION);
+			wp_enqueue_style('gd-bbpress-attachments', GDBBPRESSATTACHMENTS_URL."css/admin.css", array(), null);
 		}
 	}
 
