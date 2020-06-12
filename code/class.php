@@ -5,7 +5,6 @@ if (!defined('ABSPATH')) {
 }
 
 class GDATTCore {
-	private $wp_version;
 	private $plugin_path;
 	private $plugin_url;
 
@@ -13,28 +12,10 @@ class GDATTCore {
 	public $o;
 
 	function __construct() {
-		global $wp_version;
-
-		$this->wp_version = substr(str_replace('.', '', $wp_version), 0, 2);
-
 		$gdd = new GDATTDefaults();
-
 		$this->o = get_option('gd-bbpress-attachments');
 		if (!is_array($this->o)) {
 			$this->o = $gdd->default_options;
-			update_option('gd-bbpress-attachments', $this->o);
-		}
-
-		if (!isset($this->o['build']) || $this->o['build'] != $gdd->default_options['build']) {
-			$this->o = $this->_upgrade($this->o, $gdd->default_options);
-
-			$this->o['version'] = $gdd->default_options['version'];
-			$this->o['date'] = $gdd->default_options['date'];
-			$this->o['status'] = $gdd->default_options['status'];
-			$this->o['build'] = $gdd->default_options['build'];
-			$this->o['revision'] = $gdd->default_options['revision'];
-			$this->o['edition'] = $gdd->default_options['edition'];
-
 			update_option('gd-bbpress-attachments', $this->o);
 		}
 
@@ -57,28 +38,6 @@ class GDATTCore {
 
 		return $instance;
 	}
-
-	private function _upgrade($old, $new) {
-		foreach ($new as $key => $value) {
-			if (!isset($old[$key])) {
-				$old[$key] = $value;
-			}
-		}
-
-		$unset = array();
-		foreach ($old as $key => $value) {
-			if (!isset($new[$key])) {
-				$unset[] = $key;
-			}
-		}
-
-		foreach ($unset as $key) {
-			unset($old[$key]);
-		}
-
-		return $old;
-	}
-
 	public function load() {
 		add_action('init', array($this, 'init_thumbnail_size'), 1);
 		add_action('init', array($this, 'delete_attachments'));
