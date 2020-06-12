@@ -16,12 +16,6 @@
   float: left;
 }
 
-.d4p-settings-second,
-.d4p-information-second {
-  width: 250px;
-  float: left;
-}
-
 .d4p-information > fieldset,
 .d4p-settings > fieldset {
   background-color: #FFF;
@@ -30,49 +24,20 @@
   margin: 15px 0 0;
 }
 
-.d4p-bbpress-toolbox > fieldset {
-  background-color: #D9FAFF;
-  border-radius: 6px;
-  padding: 10px;
-  margin: 15px 0 0;
-  text-align: center;
-}
-.d4p-bbpress-toolbox > fieldset.the-top {
-  background-color: #224760;
-  color: #fff;
-}
-.d4p-bbpress-toolbox > fieldset.the-top a {
-  color: #fff;
-}
-.d4p-bbpress-toolbox > fieldset.the-top h3 {
-  margin: 5px 0;
-  font-weight: bold;
-  font-size: 18px;
-}
-.d4p-bbpress-toolbox > fieldset.the-top h4 {
-  margin: 5px 0;
-  padding: 5px 0 0;
-  border-top: 1px solid #eee;
-}
-
-.d4p-bbpress-toolbox > fieldset > *:first-child,
 .d4p-information > fieldset > *:first-child,
 .d4p-settings > fieldset > *:first-child {
   margin-top: 0;
 }
-.d4p-bbpress-toolbox > fieldset > *:last-child,
 .d4p-information > fieldset > *:last-child,
 .d4p-settings > fieldset > *:last-child {
   margin-bottom: 0;
 }
 
-.d4p-settings .form-table th,
-.d4p-settings-second .form-table th {
+.d4p-settings .form-table th{
   padding: 10px 5px;
   width: 200px;
 }
-.d4p-settings .form-table td,
-.d4p-settings-second .form-table td {
+.d4p-settings .form-table td{
   vertical-align: middle;
   padding: 10px 5px;
 }
@@ -128,12 +93,6 @@ div.d4p-updated {
   .d4p-settings,
 .d4p-information {
     padding: 0 0 30px 0;
-    width: 100%;
-    float: none;
-  }
-
-  .d4p-settings-second,
-.d4p-information-second {
     width: 100%;
     float: none;
   }

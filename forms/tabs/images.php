@@ -93,9 +93,5 @@
             <input type="submit" value="<?php _e("Save Changes", "gd-bbpress-attachments"); ?>" class="button-primary gdbb-tools-submit" id="gdbb-att-images-submit" name="gdbb-att-images-submit"/>
         </p>
     </div>
-    <div class="d4p-settings-second">
-        <?php include(GDBBPRESSATTACHMENTS_PATH.'forms/more/toolbox.php'); ?>
-    </div>
-
     <div class="d4p-clear"></div>
 </form>

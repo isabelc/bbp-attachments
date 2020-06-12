@@ -16,8 +16,7 @@
     float: left;
 }
 
-.d4p-settings-second,
-.d4p-information-second {
+.d4p-settings-second {
     width: 250px;
     float: left;
 }
@@ -32,38 +31,6 @@
     }
 }
 
-.d4p-bbpress-toolbox {
-    > fieldset {
-        background-color: #D9FAFF;
-        border-radius: 6px;
-        padding: 10px;
-        margin: 15px 0 0;
-        text-align: center;
-
-        &.the-top {
-            background-color: #224760;
-            color: #fff;
-
-            a {
-                color: #fff;
-            }
-
-            h3 {
-                margin: 5px 0;
-                font-weight: bold;
-                font-size: 18px;
-            }
-
-            h4 {
-                margin: 5px 0;
-                padding: 5px 0 0;
-                border-top: 1px solid #eee;
-            }
-        }
-    }
-}
-
-.d4p-bbpress-toolbox,
 .d4p-information,
 .d4p-settings {
     > fieldset {
@@ -163,8 +130,8 @@ div.d4p-updated {
         float: none;
     }
 
-    .d4p-settings-second,
-    .d4p-information-second {
+    .d4p-settings-second
+    {
         width: 100%;
         float: none;
     }
