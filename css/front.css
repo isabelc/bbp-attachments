@@ -1,3 +1,67 @@
+#bbp-attachment-upload,
+.bbp-attachment-toggle-active span {
+  display: none;
+}
+#bbp-attachment-toggle-wrap {
+  text-align: right;
+}
+#bbp-attachment-toggle{
+  cursor: pointer;
+  display: inline-block;
+  padding:15px 3px 6px;
+  
+}
+#bbp-attachment-toggle:hover {
+  color: #7f54b3;
+}
+
+.bbp-attachment-toggle-active {
+  border-radius: 5px;
+  border: 1px solid #000;
+    font-weight: 700;
+  
+  width:40px;
+  text-align:center;
+
+  background-color: #000;
+
+  padding-top:10px !important;
+}
+
+.bbp-attachment-toggle-active:before {
+
+  content: '\2715 ';
+  color:#fff;
+
+}
+
+.palebg {
+  background: #f7f7f7;
+}
+.d4p-attachment-addfile{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.bbp-attachments-form a {
+  color: #006eb0;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+
+  .d4p-attachment-remove {
+    margin:10px 0 0;
+    display: block;
+  }
+}
+.bbp-attachments .d4p-bbp-attachment {
+    margin: 36px 24px;
+    width: auto;
+    text-align: center;
+}
+
 .bbp-attachments,
 .bbp-attachments-errors {
   border-top: 1px solid #dddddd;
