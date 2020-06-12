@@ -70,35 +70,26 @@ class GDATTFront {
 
 		return 'generic';
 	}
-
 	public function register_scripts_and_styles() {
-		$debug = defined('SCRIPT_DEBUG') ? SCRIPT_DEBUG : false;
-		$files = 'front'.($debug ? '' : '.min');
-
-		wp_register_style('gdatt-attachments', GDBBPRESSATTACHMENTS_URL.'css/'.$files.'.css', array(), GDBBPRESSATTACHMENTS_VERSION);
-		wp_register_script('gdatt-attachments', GDBBPRESSATTACHMENTS_URL.'js/'.$files.'.js', array('jquery'), GDBBPRESSATTACHMENTS_VERSION, true);
+		wp_register_style('gdatt-attachments', GDBBPRESSATTACHMENTS_URL.'css/front.css', array(), null);
+		wp_register_script('gdatt-attachments', GDBBPRESSATTACHMENTS_URL.'js/front.js', array('jquery'), null, true);
 	}
-
 	public function include_scripts_and_styles() {
 		wp_enqueue_style('gdatt-attachments');
 		wp_enqueue_script('gdatt-attachments');
-
 		wp_localize_script('gdatt-attachments', 'gdbbPressAttachmentsInit', array(
 			'max_files' => apply_filters('d4p_bbpressattchment_allow_upload', GDATTCore::instance()->get_max_files(), bbp_get_forum_id()),
 			'are_you_sure' => __("This operation is not reversible. Are you sure?", "gd-bbpress-attachments")
 		));
 	}
-
 	public function wp_enqueue_scripts() {
 		if (d4p_bba_o('include_always') == 1 || d4p_is_bbpress()) {
 			$this->include_scripts_and_styles();
 		}
 	}
-
 	public function save_topic($topic_id, $forum_id, $anonymous_data, $topic_author) {
 		$this->save_reply(0, $topic_id, $forum_id, $anonymous_data, $topic_author);
 	}
-
 	public function save_reply($reply_id, $topic_id, $forum_id, $anonymous_data = null, $reply_author = null) {
 		$uploads = array();
 
