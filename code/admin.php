@@ -53,7 +53,7 @@ class GDATTAdmin {
     }
 
     public function plugin_actions($links, $file) {
-        if ($file == 'gd-bbpress-attachments/gd-bbpress-attachments.php') {
+        if ($file == 'bbpress-attachments/bbpress-attachments.php') {
             $settings_link = '<a href="edit.php?post_type=forum&page=gdbbpress_attachments">'.__("Settings", "gd-bbpress-attachments").'</a>';
             array_unshift($links, $settings_link);
         }
@@ -62,7 +62,7 @@ class GDATTAdmin {
     }
 
     function plugin_links($links, $file) {
-        if ($file == 'gd-bbpress-attachments/gd-bbpress-attachments.php') {
+        if ($file == 'bbpress-attachments/bbpress-attachments.php') {
             $links[] = '<a target="_blank" style="color: #cc0000; font-weight: bold;" href="https://plugins.dev4press.com/gd-bbpress-toolbox/">'.__("Upgrade to GD bbPress Toolbox Pro", "gd-bbpress-attachments").'</a>';
         }
 
