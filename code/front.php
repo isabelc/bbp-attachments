@@ -52,14 +52,10 @@ class GDATTFront {
 		add_filter('bbp_get_reply_content', array($this, 'embed_attachments'), 100, 2);
 		add_filter('bbp_get_topic_content', array($this, 'embed_attachments'), 100, 2);
 
-		if (d4p_bba_o('attachment_icon') == 1) {
-			add_action('bbp_theme_before_topic_title', array($this, 'show_attachments_icon'));
-		}
-
 		$this->register_scripts_and_styles();
 	}
 
-	private function icon($ext) {
+	private function icon($ext) {// @test need?
 		foreach ($this->icons as $icon => $list) {
 			$list = explode('|', $list);
 
@@ -185,16 +181,6 @@ class GDATTFront {
 			}
 		}
 	}
-
-	public function show_attachments_icon() {
-		$topic_id = bbp_get_topic_id();
-		$count = d4p_topic_attachments_count($topic_id, true);
-
-		if ($count > 0) {
-			echo '<span class="bbp-attachments-count" title="'.$count.' '._n("attachment", "attachments", $count, "gd-bbpress-attachments").'"></span>';
-		}
-	}
-
 	public function embed_attachments($content, $id) {
 		global $user_ID;
 
@@ -213,13 +199,7 @@ class GDATTFront {
 				$content .= sprintf(__("You must be <a href='%s'>logged in</a> to view attached files.", "gd-bbpress-attachments"), wp_login_url(get_permalink()));
 			} else {
 				if (!empty($attachments)) {
-					$listing = '<ol';
-
-					if (d4p_bba_o("attchment_icons") == 1) {
-						$listing .= ' class="with-icons"';
-					}
-
-					$listing .= '>';
+					$listing = '<ol>';
 					$thumbnails = $listing;
 					$images = $files = 0;
 
@@ -254,7 +234,6 @@ class GDATTFront {
 						}
 
 						$file = get_attached_file($attachment->ID);
-						$ext = pathinfo($file, PATHINFO_EXTENSION);
 						$filename = pathinfo($file, PATHINFO_BASENAME);
 						$file_url = wp_get_attachment_url($attachment->ID);
 
@@ -275,13 +254,8 @@ class GDATTFront {
 
 						if ($html == '') {
 							$html = $filename;
-
-							if (d4p_bba_o("attchment_icons") == 1) {
-								$class_li = "bbp-atticon bbp-atticon-".$this->icon($ext);
-							}
 						}
-
-						$item = '<li id="d4p-bbp-attachment_'.$attachment->ID.'" class="d4p-bbp-attachment d4p-bbp-attachment-'.$ext.' '.$class_li.'">';
+						$item = '<li id="d4p-bbp-attachment_'.$attachment->ID.'" class="d4p-bbp-attachment '.$class_li.'">';
 
 						if ($img) {
 							$item .= '<a href="'.$file_url.'" title="'.$a_title.'">'.$html.'</a>';
@@ -330,16 +304,8 @@ class GDATTFront {
 			if (!empty($errors)) {
 				$content .= '<div class="bbp-attachments-errors">';
 				$content .= '<h6>'.__("Upload Errors", "gd-bbpress-attachments").':</h6>';
-				$content .= '<ol';
-
+				$content .= '<ol>';
 				$class_li = 'bbp-file-error';
-				if (d4p_bba_o("attchment_icons") == 1) {
-					$content .= ' class="with-icons"';
-					$class_li .= ' bbp-atticon bbp-atticon-error';
-				}
-
-				$content .= '>';
-
 				foreach ($errors as $error) {
 					$content .= '<li class="'.$class_li.'"><strong>'.esc_html($error['file']).'</strong>: '.__($error['message'], "gd-bbpress-attachments").'</li>';
 				}

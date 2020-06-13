@@ -41,8 +41,6 @@ class GDATTAdminMeta {
 			GDATTCore::instance()->o['max_file_size'] = absint($_POST['max_file_size']);
 			GDATTCore::instance()->o['max_to_upload'] = absint($_POST['max_to_upload']);
 			GDATTCore::instance()->o['roles_to_upload'] = (array)$_POST['roles_to_upload'];
-			GDATTCore::instance()->o['attachment_icon'] = isset($_POST['attachment_icon']) ? 1 : 0;
-			GDATTCore::instance()->o['attchment_icons'] = isset($_POST['attchment_icons']) ? 1 : 0;
 			GDATTCore::instance()->o['hide_from_visitors'] = isset($_POST['hide_from_visitors']) ? 1 : 0;
 			GDATTCore::instance()->o['include_always'] = isset($_POST['include_always']) ? 1 : 0;
 			GDATTCore::instance()->o['delete_attachments'] = d4p_sanitize_basic($_POST['delete_attachments']);

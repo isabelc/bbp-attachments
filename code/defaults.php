@@ -21,8 +21,6 @@ class GDATTDefaults {
 		'max_file_size' => 512,
 		'max_to_upload' => 4,
 		'roles_to_upload' => null,
-		'attachment_icon' => 1,
-		'attchment_icons' => 1,
 		'image_thumbnail_active' => 1,
 		'image_thumbnail_caption' => 1,
 		'log_upload_errors' => 1,

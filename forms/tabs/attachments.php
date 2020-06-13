@@ -115,36 +115,6 @@
                 </tbody>
             </table>
         </fieldset>
-
-        <fieldset>
-            <h3><?php _e("Forums Integration", "gd-bbpress-attachments"); ?></h3>
-            <p><?php _e("With these options you can modify the forums to include attachment elements.", "gd-bbpress-attachments"); ?></p>
-            <table class="form-table">
-                <tbody>
-                <tr valign="top">
-                    <th scope="row">
-                        <label for="attachment_icon"><?php _e("Attachment Icon", "gd-bbpress-attachments"); ?></label>
-                    </th>
-                    <td>
-                        <input type="checkbox" <?php if ($options["attachment_icon"] == 1) {
-                            echo " checked";
-                        } ?> name="attachment_icon"/>
-                    </td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row">
-                        <label for="attchment_icons"><?php _e("File Type Icons", "gd-bbpress-attachments"); ?></label>
-                    </th>
-                    <td>
-                        <input type="checkbox" <?php if ($options["attchment_icons"] == 1) {
-                            echo " checked";
-                        } ?> name="attchment_icons"/>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </fieldset>
-
         <p class="submit">
             <input type="submit" value="<?php _e("Save Changes", "gd-bbpress-attachments"); ?>" class="button-primary gdbb-tools-submit" id="gdbb-attach-submit" name="gdbb-attach-submit"/>
         </p>
