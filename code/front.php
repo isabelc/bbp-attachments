@@ -258,7 +258,7 @@ class GDATTFront {
 						$filename = pathinfo($file, PATHINFO_BASENAME);
 						$file_url = wp_get_attachment_url($attachment->ID);
 
-						$html = $class_li = $class_a = $rel_a = "";
+						$html = $class_li = $rel_a = "";
 						$a_title = $filename;
 						$caption = false;
 
@@ -269,7 +269,6 @@ class GDATTFront {
 							if ($html != "") {
 								$img = true;
 								$class_li = 'bbp-atthumb';
-								$class_a = d4p_bba_o('image_thumbnail_css');
 								$caption = d4p_bba_o('image_thumbnail_caption') == 1;
 								$rel_a = ' rel="'.d4p_bba_o('image_thumbnail_rel').'"';
 								$rel_a = str_replace('%ID%', $id, $rel_a);
@@ -288,9 +287,9 @@ class GDATTFront {
 						$item = '<li id="d4p-bbp-attachment_'.$attachment->ID.'" class="d4p-bbp-attachment d4p-bbp-attachment-'.$ext.' '.$class_li.'">';
 
 						if ($img) {
-							$item .= '<a class="'.$class_a.'"'.$rel_a.' href="'.$file_url.'" title="'.$a_title.'">'.$html.'</a>';
+							$item .= '<a '.$rel_a.' href="'.$file_url.'" title="'.$a_title.'">'.$html.'</a>';
 						} else {
-							$item .= '<a class="'.$class_a.'"'.$rel_a.$_download.' href="'.$file_url.'" title="'.$a_title.'">'.$html.'</a>';
+							$item .= '<a '.$rel_a.$_download.' href="'.$file_url.'" title="'.$a_title.'">'.$html.'</a>';
 						}
 
 						if ($caption) {
