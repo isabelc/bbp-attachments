@@ -72,7 +72,6 @@ class GDATTAdminMeta {
 			check_admin_referer('gd-bbpress-attachments');
 
 			GDATTCore::instance()->o['image_thumbnail_active'] = isset($_POST['image_thumbnail_active']) ? 1 : 0;
-			GDATTCore::instance()->o['image_thumbnail_inline'] = isset($_POST['image_thumbnail_inline']) ? 1 : 0;
 			GDATTCore::instance()->o['image_thumbnail_caption'] = isset($_POST['image_thumbnail_caption']) ? 1 : 0;
 			GDATTCore::instance()->o['image_thumbnail_rel'] = d4p_sanitize_basic($_POST['image_thumbnail_rel']);
 			GDATTCore::instance()->o['image_thumbnail_css'] = d4p_sanitize_basic($_POST['image_thumbnail_css']);

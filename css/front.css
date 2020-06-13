@@ -139,10 +139,6 @@
 	padding: 0;
 	height: auto;
 }
-#bbpress-forums .bbp-attachments ol li.bbp-atthumb.bbp-inline {
-	float: left;
-	margin-right: 5px !important;
-}
 #bbpress-forums .bbp-attachments ol li.bbp-atthumb .wp-caption {
 	padding: 5px;
 	margin: 0;

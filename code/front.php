@@ -268,16 +268,9 @@ class GDATTFront {
 
 							if ($html != "") {
 								$img = true;
-
 								$class_li = 'bbp-atthumb';
-
-								if (d4p_bba_o('image_thumbnail_inline') == 1) {
-									$class_li .= ' bbp-inline';
-								}
-
 								$class_a = d4p_bba_o('image_thumbnail_css');
 								$caption = d4p_bba_o('image_thumbnail_caption') == 1;
-
 								$rel_a = ' rel="'.d4p_bba_o('image_thumbnail_rel').'"';
 								$rel_a = str_replace('%ID%', $id, $rel_a);
 								$rel_a = str_replace('%TOPIC%', bbp_get_topic_id(), $rel_a);

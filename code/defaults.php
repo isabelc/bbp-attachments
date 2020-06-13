@@ -24,7 +24,6 @@ class GDATTDefaults {
 		'attachment_icon' => 1,
 		'attchment_icons' => 1,
 		'image_thumbnail_active' => 1,
-		'image_thumbnail_inline' => 0,
 		'image_thumbnail_caption' => 1,
 		'image_thumbnail_rel' => 'lightbox',
 		'image_thumbnail_css' => '',
