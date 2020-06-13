@@ -49,18 +49,29 @@
   text-decoration: none;
 }
 
+.bbp-attachments .d4p-bbp-attachment {
+    margin: 36px 18px;
+}
+
+
+
 @media screen and (max-width: 480px) {
+
+
+  .fp-page__main .bbp-attachments ol{
+    padding:0;
+  }
+  .bbp-attachments .d4p-bbp-attachment {
+      text-align: center;
+  }
+
 
   .d4p-attachment-remove {
     margin:10px 0 0;
     display: block;
   }
 }
-.bbp-attachments .d4p-bbp-attachment {
-    margin: 36px 24px;
-    width: auto;
-    text-align: center;
-}
+
 
 .bbp-attachments,
 .bbp-attachments-errors {
