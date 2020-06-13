@@ -76,9 +76,6 @@ class GDATTAdminMeta {
 			GDATTCore::instance()->o['image_thumbnail_caption'] = isset($_POST['image_thumbnail_caption']) ? 1 : 0;
 			GDATTCore::instance()->o['image_thumbnail_rel'] = d4p_sanitize_basic($_POST['image_thumbnail_rel']);
 			GDATTCore::instance()->o['image_thumbnail_css'] = d4p_sanitize_basic($_POST['image_thumbnail_css']);
-			GDATTCore::instance()->o['image_thumbnail_size_x'] = absint($_POST['image_thumbnail_size_x']);
-			GDATTCore::instance()->o['image_thumbnail_size_y'] = absint($_POST['image_thumbnail_size_y']);
-
 			update_option('gd-bbpress-attachments', GDATTCore::instance()->o);
 			wp_redirect(add_query_arg('settings-updated', 'true'));
 			exit();

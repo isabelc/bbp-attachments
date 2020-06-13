@@ -62,33 +62,6 @@
                 </tbody>
             </table>
         </fieldset>
-
-        <fieldset>
-            <h3><?php _e("Image thumbnails size", "gd-bbpress-attachments"); ?></h3>
-            <p><?php _e("Changing thumbnails size affects only new image attachments. To use new size for old attachments, resize them using", "gd-bbpress-attachments"); ?>
-                <a href="https://wordpress.org/plugins/regenerate-thumbnails/" target="_blank">Regenerate Thumbnails</a> <?php _e("plugin", "gd-bbpress-attachments"); ?>.
-            </p>
-            <table class="form-table">
-                <tbody>
-                <tr valign="top">
-                    <th scope="row">
-                        <label for="image_thumbnail_size_x"><?php _e("Thumbnail size", "gd-bbpress-attachments"); ?></label>
-                    </th>
-                    <td>x:</td>
-                    <td>
-                        <input step="1" min="1" type="number" class="widefat small-text" value="<?php echo $options["image_thumbnail_size_x"]; ?>" id="image_thumbnail_size_x" name="image_thumbnail_size_x"/>
-                        <span class="description">px</span>
-                    </td>
-                    <td>y:</td>
-                    <td>
-                        <input step="1" min="1" type="number" class="widefat small-text" value="<?php echo $options["image_thumbnail_size_y"]; ?>" id="image_thumbnail_size_y" name="image_thumbnail_size_y"/>
-                        <span class="description">px</span>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </fieldset>
-
         <p class="submit">
             <input type="submit" value="<?php _e("Save Changes", "gd-bbpress-attachments"); ?>" class="button-primary gdbb-tools-submit" id="gdbb-att-images-submit" name="gdbb-att-images-submit"/>
         </p>
