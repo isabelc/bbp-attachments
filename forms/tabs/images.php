@@ -32,15 +32,6 @@
                         } ?> name="image_thumbnail_caption"/>
                     </td>
                 </tr>
-                <tr valign="top">
-                    <th scope="row">
-                        <label for="image_thumbnail_rel"><?php _e("REL attribute", "gd-bbpress-attachments"); ?></label>
-                    </th>
-                    <td>
-                        <input type="text" class="widefat" value="<?php echo $options["image_thumbnail_rel"]; ?>" id="image_thumbnail_rel" name="image_thumbnail_rel"/><br/>
-                        <em><?php _e("You can use these tags", "gd-bbpress-attachments"); ?>: %ID%, %TOPIC%</em>
-                    </td>
-                </tr>
                 </tbody>
             </table>
         </fieldset>

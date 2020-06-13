@@ -25,7 +25,6 @@ class GDATTDefaults {
 		'attchment_icons' => 1,
 		'image_thumbnail_active' => 1,
 		'image_thumbnail_caption' => 1,
-		'image_thumbnail_rel' => 'lightbox',
 		'log_upload_errors' => 1,
 		'errors_visible_to_admins' => 1,
 		'errors_visible_to_moderators' => 1,
