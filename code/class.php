@@ -39,11 +39,8 @@ class GDATTCore {
 		return $instance;
 	}
 	public function load() {
-		add_action('init', array($this, 'init_thumbnail_size'), 1);
 		add_action('init', array($this, 'delete_attachments'));
-
 		add_action('before_delete_post', array($this, 'delete_post'));
-
 		if (is_admin()) {
 			require_once(GDBBPRESSATTACHMENTS_PATH.'code/admin.php');
 			require_once(GDBBPRESSATTACHMENTS_PATH.'code/meta.php');
@@ -56,11 +53,6 @@ class GDATTCore {
 			GDATTFront::instance();
 		}
 	}
-
-	public function init_thumbnail_size() {
-		add_image_size('d4p-bbp-thumb', $this->o['image_thumbnail_size_x'], $this->o['image_thumbnail_size_y'], true);
-	}
-
 	public function delete_attachments() {
 		if (isset($_GET['d4pbbaction'])) {
 			$nonce = wp_verify_nonce($_GET['_wpnonce'], 'd4p-bbpress-attachments');

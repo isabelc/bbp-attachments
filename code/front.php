@@ -264,7 +264,7 @@ class GDATTFront {
 
 						$img = false;
 						if (d4p_bba_o('image_thumbnail_active') == 1) {
-							$html = wp_get_attachment_image($attachment->ID, 'd4p-bbp-thumb');
+							$html = wp_get_attachment_image($attachment->ID, 'thumbnail');
 
 							if ($html != "") {
 								$img = true;
