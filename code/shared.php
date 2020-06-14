@@ -16,7 +16,6 @@ if (!class_exists('gdbbp_Error')) {
 		}
 	}
 }
-
 function d4p_bbpress_get_user_roles() {
 	$roles = array();
 	$dynamic_roles = bbp_get_dynamic_roles();
@@ -24,19 +23,6 @@ function d4p_bbpress_get_user_roles() {
 		$roles[$role] = $obj['name'];
 	}
 	return $roles;
-}
-function d4p_has_bbpress() {
-	if (function_exists('bbp_version')) {
-		$version = bbp_get_version();
-		$version = intval(substr(str_replace('.', '', $version), 0, 2));
-		return $version > 22;
-	} else {
-		return false;
-	}
-}
-function d4p_is_bbpress() {
-	$is = d4p_has_bbpress() ? is_bbpress() : false;
-	return $is;
 }
 function d4p_is_user_moderator() {
 	global $current_user;

@@ -79,7 +79,8 @@ class GDATTFront {
 		));
 	}
 	public function wp_enqueue_scripts() {
-		if (d4p_bba_o('include_always') == 1 || d4p_is_bbpress()) {
+		$isbbp = class_exists('bbPress') ? is_bbpress() : false;
+		if (d4p_bba_o('include_always') == 1 || $isbbp) {
 			$this->include_scripts_and_styles();
 		}
 	}

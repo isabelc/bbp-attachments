@@ -108,7 +108,7 @@ class GDATTCore {
 	}
 
 	public function delete_post($id) {
-		if (d4p_has_bbpress()) {
+		if (class_exists('bbPress')) {
 			if (bbp_is_reply($id) || bbp_is_topic($id)) {
 				if ($this->o['delete_attachments'] == 'delete') {
 					$files = d4p_get_post_attachments($id);
