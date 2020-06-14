@@ -74,7 +74,7 @@ class GDATTFront {
 		wp_enqueue_style('gdatt-attachments');
 		wp_enqueue_script('gdatt-attachments');
 		wp_localize_script('gdatt-attachments', 'bbpatt_str', array(
-			'max_files' => apply_filters('d4p_bbpressattchment_allow_upload', GDATTCore::instance()->get_max_files(), bbp_get_forum_id()),
+			'max_files' => GDATTCore::instance()->get_max_files(),
 			'are_you_sure' => __("This operation is not reversible. Are you sure?", "gd-bbpress-attachments")
 		));
 	}
@@ -319,17 +319,16 @@ class GDATTFront {
 	}
 
 	public function embed_form() {
-		$can_upload = apply_filters('d4p_bbpressattchment_allow_upload', GDATTCore::instance()->is_user_allowed(), d4p_get_forum_id());
+		$can_upload = GDATTCore::instance()->is_user_allowed();
 		if (!$can_upload) {
 			return;
 		}
-
-		$is_enabled = apply_filters('d4p_bbpressattchment_forum_enabled', GDATTCore::instance()->enabled_for_forum(), d4p_get_forum_id());
+		$is_enabled = GDATTCore::instance()->enabled_for_forum();
 		if (!$is_enabled) {
 			return;
 		}
 
-		$file_size = apply_filters('d4p_bbpressattchment_max_file_size', GDATTCore::instance()->get_file_size(), d4p_get_forum_id());
+		$file_size = GDATTCore::instance()->get_file_size();
 
 		include(GDBBPRESSATTACHMENTS_PATH.'forms/uploader.php');
 	}

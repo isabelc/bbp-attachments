@@ -161,18 +161,13 @@ class GDATTCore {
 
 		return $value;
 	}
-
 	public function is_right_size($file, $forum_id = 0) {
 		$forum_id = $forum_id == 0 ? bbp_get_forum_id() : $forum_id;
-
-		$file_size = apply_filters('d4p_bbpressattchment_max_file_size', $this->get_file_size(false, $forum_id), $forum_id);
-
+		$file_size = $this->get_file_size(false, $forum_id);
 		return $file["size"] < $file_size * 1024;
 	}
-
 	public function is_user_allowed() {
 		$allowed = false;
-
 		if (is_user_logged_in()) {
 			if (!isset($this->o['roles_to_upload'])) {
 				$allowed = true;
@@ -181,7 +176,6 @@ class GDATTCore {
 				if (!is_array($value)) {
 					$allowed = true;
 				}
-
 				global $current_user;
 				if (is_array($current_user->roles)) {
 					$matched = array_intersect($current_user->roles, $value);
@@ -189,10 +183,8 @@ class GDATTCore {
 				}
 			}
 		}
-
-		return apply_filters('d4p_bbpressattchment_is_user_allowed', $allowed);
+		return $allowed;
 	}
-
 	public function is_hidden_from_visitors($forum_id = 0) {
 		$forum_id = $forum_id == 0 ? bbp_get_forum_id() : $forum_id;
 
@@ -203,6 +195,6 @@ class GDATTCore {
 			$value = $meta['hide_from_visitors'];
 		}
 
-		return apply_filters('d4p_bbpressattchment_is_hidden_from_visitors', $value == 1);
+		return ($value == 1);
 	}
 }
