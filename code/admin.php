@@ -40,7 +40,7 @@ class GDATTAdmin {
 	}
 
 	public function admin_menu() {
-		$this->page_ids[] = add_submenu_page('edit.php?post_type=forum', 'bbPress Attachments', "Attachments", GDBBPRESSATTACHMENTS_CAP, 'gdbbpress_attachments', array($this, 'menu_attachments'));
+		$this->page_ids[] = add_submenu_page('edit.php?post_type=forum', 'bbPress Attachments', "Attachments", 'activate_plugins', 'gdbbpress_attachments', array($this, 'menu_attachments'));
 	}
 	public function plugin_actions($links, $file) {
 		if ($file == 'bbp-attachments/bbp-attachments.php') {

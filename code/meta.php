@@ -122,7 +122,7 @@ class GDATTAdminMeta {
 	}
 
 	public function admin_meta() {
-		if (current_user_can(GDBBPRESSATTACHMENTS_CAP)) {
+		if (current_user_can('activate_plugins')) {
 			add_meta_box('gdbbattach-meta-forum', "Attachments Settings", array($this, 'metabox_forum'), 'forum', 'side', 'high');
 			add_meta_box('gdbbattach-meta-files', "Attachments List", array($this, 'metabox_files'), 'topic', 'side', 'high');
 			add_meta_box('gdbbattach-meta-files', "Attachments List", array($this, 'metabox_files'), 'reply', 'side', 'high');
