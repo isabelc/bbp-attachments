@@ -73,7 +73,7 @@ class GDATTFront {
 	public function include_scripts_and_styles() {
 		wp_enqueue_style('gdatt-attachments');
 		wp_enqueue_script('gdatt-attachments');
-		wp_localize_script('gdatt-attachments', 'gdbbPressAttachmentsInit', array(
+		wp_localize_script('gdatt-attachments', 'bbpatt_str', array(
 			'max_files' => apply_filters('d4p_bbpressattchment_allow_upload', GDATTCore::instance()->get_max_files(), bbp_get_forum_id()),
 			'are_you_sure' => __("This operation is not reversible. Are you sure?", "gd-bbpress-attachments")
 		));
