@@ -110,8 +110,7 @@ class GDATTAdminMeta {
 	}
 
 	public function admin_post_columns($columns) {
-		$columns['gdbbatt_count'] = '<img src="'.GDBBPRESSATTACHMENTS_URL.'css/gfx/attachment.png" width="16" height="12" alt="'.__("Attachments", "gd-bbpress-attachments").'" title="'.__("Attachments", "gd-bbpress-attachments").'" />';
-
+		$columns['gdbbatt_count'] = '<img src="'.GDBBPRESSATTACHMENTS_URL.'css/gfx/attachment.png" width="16" height="12" alt="Attachments" title="Attachments" />';
 		return $columns;
 	}
 
@@ -124,9 +123,9 @@ class GDATTAdminMeta {
 
 	public function admin_meta() {
 		if (current_user_can(GDBBPRESSATTACHMENTS_CAP)) {
-			add_meta_box('gdbbattach-meta-forum', __("Attachments Settings", "gd-bbpress-attachments"), array($this, 'metabox_forum'), 'forum', 'side', 'high');
-			add_meta_box('gdbbattach-meta-files', __("Attachments List", "gd-bbpress-attachments"), array($this, 'metabox_files'), 'topic', 'side', 'high');
-			add_meta_box('gdbbattach-meta-files', __("Attachments List", "gd-bbpress-attachments"), array($this, 'metabox_files'), 'reply', 'side', 'high');
+			add_meta_box('gdbbattach-meta-forum', "Attachments Settings", array($this, 'metabox_forum'), 'forum', 'side', 'high');
+			add_meta_box('gdbbattach-meta-files', "Attachments List", array($this, 'metabox_files'), 'topic', 'side', 'high');
+			add_meta_box('gdbbattach-meta-files', "Attachments List", array($this, 'metabox_files'), 'reply', 'side', 'high');
 		}
 	}
 

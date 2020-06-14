@@ -75,7 +75,7 @@ class GDATTFront {
 		wp_enqueue_script('gdatt-attachments');
 		wp_localize_script('gdatt-attachments', 'bbpatt_str', array(
 			'max_files' => GDATTCore::instance()->get_max_files(),
-			'are_you_sure' => __("This operation is not reversible. Are you sure?", "gd-bbpress-attachments")
+			'are_you_sure' => "This operation is not reversible. Are you sure?"
 		));
 	}
 	public function wp_enqueue_scripts() {
@@ -192,12 +192,12 @@ class GDATTFront {
 
 		if (!empty($attachments)) {
 			$content .= '<div class="bbp-attachments">';
-			$content .= '<h6>'.__("Attachments", "gd-bbpress-attachments").':</h6>';
+			$content .= '<h6>Attachments:</h6>';
 
 			$_download = ' download';
 
 			if (!is_user_logged_in() && GDATTCore::instance()->is_hidden_from_visitors()) {
-				$content .= sprintf(__("You must be <a href='%s'>logged in</a> to view attached files.", "gd-bbpress-attachments"), wp_login_url(get_permalink()));
+				$content .= sprintf("You must be <a href='%s'>logged in</a> to view attached files.", wp_login_url(get_permalink()));
 			} else {
 				if (!empty($attachments)) {
 					$listing = '<ol>';
@@ -221,11 +221,11 @@ class GDATTFront {
 						}
 
 						if ($allow == 'delete' || $allow == 'both') {
-							$actions[] = '<a class="d4p-bba-action-delete" href="'.add_query_arg('d4pbbaction', 'delete', $url).'">'.__("delete", "gd-bbpress-attachments").'</a>';
+							$actions[] = '<a class="d4p-bba-action-delete" href="'.add_query_arg('d4pbbaction', 'delete', $url).'">delete</a>';
 						}
 
 						if ($allow == 'detach' || $allow == 'both') {
-							$actions[] = '<a class="d4p-bba-action-detach" href="'.add_query_arg('d4pbbaction', 'detach', $url).'">'.__("detach", "gd-bbpress-attachments").'</a>';
+							$actions[] = '<a class="d4p-bba-action-detach" href="'.add_query_arg('d4pbbaction', 'detach', $url).'">detach</a>';
 						}
 
 						if (count($actions) > 0) {
@@ -304,13 +304,12 @@ class GDATTFront {
 
 			if (!empty($errors)) {
 				$content .= '<div class="bbp-attachments-errors">';
-				$content .= '<h6>'.__("Upload Errors", "gd-bbpress-attachments").':</h6>';
+				$content .= '<h6>Upload Errors:</h6>';
 				$content .= '<ol>';
 				$class_li = 'bbp-file-error';
 				foreach ($errors as $error) {
-					$content .= '<li class="'.$class_li.'"><strong>'.esc_html($error['file']).'</strong>: '.__($error['message'], "gd-bbpress-attachments").'</li>';
+					$content .= '<li class="'.$class_li.'"><strong>'.esc_html($error['file']).'</strong>: '.$error['message'] . '</li>';
 				}
-
 				$content .= '</ol></div>';
 			}
 		}

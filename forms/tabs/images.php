@@ -1,6 +1,6 @@
 <?php if (isset($_GET["settings-updated"]) && $_GET["settings-updated"] == "true") { ?>
     <div class="updated settings-error" id="setting-error-settings_updated">
-        <p><strong><?php _e("Settings saved.", "gd-bbpress-attachments"); ?></strong></p>
+        <p><strong>Settings saved.</strong></p>
     </div>
 <?php } ?>
 
@@ -8,13 +8,13 @@
     <?php wp_nonce_field("gd-bbpress-attachments"); ?>
     <div class="d4p-settings">
         <fieldset>
-            <h3><?php _e("Display of image attachments", "gd-bbpress-attachments"); ?></h3>
-            <p><?php _e("Attached images can be displayed as thumbnails, and from here you can control this.", "gd-bbpress-attachments"); ?></p>
+            <h3>Display of image attachments</h3>
+            <p>Attached images can be displayed as thumbnails, and from here you can control this.</p>
             <table class="form-table">
                 <tbody>
                 <tr valign="top">
                     <th scope="row">
-                        <label for="image_thumbnail_active"><?php _e("Activated", "gd-bbpress-attachments"); ?></label>
+                        <label for="image_thumbnail_active">Activated</label>
                     </th>
                     <td>
                         <input type="checkbox" <?php if ($options["image_thumbnail_active"] == 1) {
@@ -24,7 +24,7 @@
                 </tr>
                 <tr valign="top">
                     <th scope="row">
-                        <label for="image_thumbnail_caption"><?php _e("With caption", "gd-bbpress-attachments"); ?></label>
+                        <label for="image_thumbnail_caption">With caption</label>
                     </th>
                     <td>
                         <input type="checkbox" <?php if ($options["image_thumbnail_caption"] == 1) {
@@ -36,7 +36,7 @@
             </table>
         </fieldset>
         <p class="submit">
-            <input type="submit" value="<?php _e("Save Changes", "gd-bbpress-attachments"); ?>" class="button-primary gdbb-tools-submit" id="gdbb-att-images-submit" name="gdbb-att-images-submit"/>
+            <input type="submit" value="Save Changes" class="button-primary gdbb-tools-submit" id="gdbb-att-images-submit" name="gdbb-att-images-submit"/>
         </p>
     </div>
     <div class="d4p-clear"></div>

@@ -3,9 +3,9 @@
 $current = isset($_GET['tab']) ? sanitize_key($_GET['tab']) : 'attachments';
 
 $tabs = array(
-    'attachments' => '<span class="dashicons dashicons-admin-settings" title="'.__("Settings", "gd-bbpress-attachments").'"></span><span class="tab-title"> '.__("Settings", "gd-bbpress-attachments").'</span>',
-    'images' => '<span class="dashicons dashicons-images-alt" title="'.__("Images", "gd-bbpress-attachments").'"></span><span class="tab-title"> '.__("Images", "gd-bbpress-attachments").'</span>',
-    'advanced' => '<span class="dashicons dashicons-admin-tools" title="'.__("Advanced", "gd-bbpress-attachments").'"></span><span class="tab-title"> '.__("Advanced", "gd-bbpress-attachments").'</span>'
+    'attachments' => '<span class="dashicons dashicons-admin-settings" title="Settings"></span><span class="tab-title"> Settings</span>',
+    'images' => '<span class="dashicons dashicons-images-alt" title="Images"></span><span class="tab-title"> Images</span>',
+    'advanced' => '<span class="dashicons dashicons-admin-tools" title="Advanced"></span><span class="tab-title"> Advanced</span>'
 );
 
 if (!isset($tabs[$current])) {

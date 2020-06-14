@@ -37,12 +37,12 @@ class GDATTDefaults {
 }
 
 $d4p_upload_error_messages = array(
-	__("File exceeds allowed file size.", "gd-bbpress-attachments"),
-	__("File not uploaded.", "gd-bbpress-attachments"),
-	__("Upload file size exceeds PHP maximum file size allowed.", "gd-bbpress-attachments"),
-	__("Upload file size exceeds FORM specified file size.", "gd-bbpress-attachments"),
-	__("Upload file only partially uploaded.", "gd-bbpress-attachments"),
-	__("Can't write file to the disk.", "gd-bbpress-attachments"),
-	__("Temporary folder for upload is missing.", "gd-bbpress-attachments"),
-	__("Server extension restriction stopped upload.", "gd-bbpress-attachments")
+	"File exceeds allowed file size.",
+	"File not uploaded.",
+	"Upload file size exceeds PHP maximum file size allowed.",
+	"Upload file size exceeds FORM specified file size.",
+	"Upload file only partially uploaded.",
+	"Can't write file to the disk.",
+	"Temporary folder for upload is missing.",
+	"Server extension restriction stopped upload."
 );

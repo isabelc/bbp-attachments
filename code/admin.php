@@ -40,14 +40,13 @@ class GDATTAdmin {
 	}
 
 	public function admin_menu() {
-		$this->page_ids[] = add_submenu_page('edit.php?post_type=forum', 'bbPress Attachments', __("Attachments", "gd-bbpress-attachments"), GDBBPRESSATTACHMENTS_CAP, 'gdbbpress_attachments', array($this, 'menu_attachments'));
+		$this->page_ids[] = add_submenu_page('edit.php?post_type=forum', 'bbPress Attachments', "Attachments", GDBBPRESSATTACHMENTS_CAP, 'gdbbpress_attachments', array($this, 'menu_attachments'));
 	}
 	public function plugin_actions($links, $file) {
 		if ($file == 'bbp-attachments/bbp-attachments.php') {
-			$settings_link = '<a href="edit.php?post_type=forum&page=gdbbpress_attachments">'.__("Settings", "gd-bbpress-attachments").'</a>';
+			$settings_link = '<a href="edit.php?post_type=forum&page=gdbbpress_attachments">Settings</a>';
 			array_unshift($links, $settings_link);
 		}
-
 		return $links;
 	}
 	public function menu_attachments() {
