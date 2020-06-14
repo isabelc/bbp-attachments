@@ -5,29 +5,9 @@ if (!defined('ABSPATH')) {
 }
 
 class GDATTFront {
-	private $icons = array(
-		'code' => 'c|cc|h|js|class',
-		'xml' => 'xml',
-		'excel' => 'xla|xls|xlsx|xlt|xlw|xlam|xlsb|xlsm|xltm',
-		'word' => 'docx|dotx|docm|dotm',
-		'image' => 'png|gif|jpg|jpeg|jpe|jp|bmp|tif|tiff|svg',
-		'psd' => 'psd',
-		'ai' => 'ai',
-		'archive' => 'zip|rar|gz|gzip|tar',
-		'text' => 'txt|asc|nfo',
-		'powerpoint' => 'pot|pps|ppt|pptx|ppam|pptm|sldm|ppsm|potm',
-		'pdf' => 'pdf',
-		'html' => 'htm|html|css',
-		'video' => 'avi|asf|asx|wax|wmv|wmx|divx|flv|mov|qt|mpeg|mpg|mpe|mp4|m4v|ogv|mkv',
-		'documents' => 'odt|odp|ods|odg|odc|odb|odf|wp|wpd|rtf',
-		'audio' => 'mp3|m4a|m4b|mp4|m4v|wav|ra|ram|ogg|oga|mid|midi|wma|mka',
-		'icon' => 'ico'
-	);
-
 	function __construct() {
 		add_action('bbp_init', array($this, 'load'));
 	}
-
 	public static function instance() {
 		static $instance = false;
 
@@ -37,7 +17,6 @@ class GDATTFront {
 
 		return $instance;
 	}
-
 	public function load() {
 		add_action('wp_enqueue_scripts', array($this, 'wp_enqueue_scripts'));
 
@@ -53,18 +32,6 @@ class GDATTFront {
 		add_filter('bbp_get_topic_content', array($this, 'embed_attachments'), 100, 2);
 
 		$this->register_scripts_and_styles();
-	}
-
-	private function icon($ext) {// @test need?
-		foreach ($this->icons as $icon => $list) {
-			$list = explode('|', $list);
-
-			if (in_array($ext, $list)) {
-				return $icon;
-			}
-		}
-
-		return 'generic';
 	}
 	public function register_scripts_and_styles() {
 		wp_register_style('gdatt-attachments', GDBBPRESSATTACHMENTS_URL.'css/front.css', array(), null);
