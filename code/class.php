@@ -21,8 +21,8 @@ class GDATTCore {
 		$this->plugin_path = dirname(dirname(__FILE__)).'/';
 		$this->plugin_url = plugins_url('/bbp-attachments/');
 
-		define('GDBBPRESSATTACHMENTS_URL', $this->plugin_url);
-		define('GDBBPRESSATTACHMENTS_PATH', $this->plugin_path);
+		define('BBPATTACHMENTS_URL', $this->plugin_url);
+		define('BBPATTACHMENTS_PATH', $this->plugin_path);
 
 		add_action('after_setup_theme', array($this, 'load'), 5);
 	}
@@ -40,13 +40,13 @@ class GDATTCore {
 		add_action('init', array($this, 'delete_attachments'));
 		add_action('before_delete_post', array($this, 'delete_post'));
 		if (is_admin()) {
-			require_once(GDBBPRESSATTACHMENTS_PATH.'code/admin.php');
-			require_once(GDBBPRESSATTACHMENTS_PATH.'code/meta.php');
+			require_once(BBPATTACHMENTS_PATH.'code/admin.php');
+			require_once(BBPATTACHMENTS_PATH.'code/meta.php');
 
 			GDATTAdmin::instance();
 			GDATTAdminMeta::instance();
 		} else {
-			require_once(GDBBPRESSATTACHMENTS_PATH.'code/front.php');
+			require_once(BBPATTACHMENTS_PATH.'code/front.php');
 
 			GDATTFront::instance();
 		}

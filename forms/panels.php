@@ -27,6 +27,6 @@ if (!isset($tabs[$current])) {
         ?>
     </h2>
     <div id="d4p-panel" class="d4p-panel-<?php echo $current; ?>">
-        <?php include(GDBBPRESSATTACHMENTS_PATH."forms/tabs/".$current.".php"); ?>
+        <?php include(BBPATTACHMENTS_PATH."forms/tabs/".$current.".php"); ?>
     </div>
 </div>

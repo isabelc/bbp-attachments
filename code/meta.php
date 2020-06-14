@@ -110,7 +110,7 @@ class GDATTAdminMeta {
 	}
 
 	public function admin_post_columns($columns) {
-		$columns['gdbbatt_count'] = '<img src="'.GDBBPRESSATTACHMENTS_URL.'css/gfx/attachment.png" width="16" height="12" alt="Attachments" title="Attachments" />';
+		$columns['gdbbatt_count'] = '<img src="'.BBPATTACHMENTS_URL.'css/gfx/attachment.png" width="16" height="12" alt="Attachments" title="Attachments" />';
 		return $columns;
 	}
 
@@ -144,7 +144,7 @@ class GDATTAdminMeta {
 			);
 		}
 
-		include(GDBBPRESSATTACHMENTS_PATH.'forms/attachments/meta_forum.php');
+		include(BBPATTACHMENTS_PATH.'forms/attachments/meta_forum.php');
 	}
 
 	public function metabox_files() {
@@ -153,6 +153,6 @@ class GDATTAdminMeta {
 		$post = get_post($post_ID);
 		$author_id = $post->post_author;
 
-		include(GDBBPRESSATTACHMENTS_PATH.'forms/attachments/meta_files.php');
+		include(BBPATTACHMENTS_PATH.'forms/attachments/meta_files.php');
 	}
 }

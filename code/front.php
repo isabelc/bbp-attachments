@@ -34,8 +34,8 @@ class GDATTFront {
 		$this->register_scripts_and_styles();
 	}
 	public function register_scripts_and_styles() {
-		wp_register_style('gdatt-attachments', GDBBPRESSATTACHMENTS_URL.'css/front.css', array(), null);
-		wp_register_script('gdatt-attachments', GDBBPRESSATTACHMENTS_URL.'js/front.js', array('jquery'), null, true);
+		wp_register_style('gdatt-attachments', BBPATTACHMENTS_URL.'css/front.css', array(), null);
+		wp_register_script('gdatt-attachments', BBPATTACHMENTS_URL.'js/front.js', array('jquery'), null, true);
 	}
 	public function include_scripts_and_styles() {
 		wp_enqueue_style('gdatt-attachments');
@@ -296,6 +296,6 @@ class GDATTFront {
 
 		$file_size = GDATTCore::instance()->get_file_size();
 
-		include(GDBBPRESSATTACHMENTS_PATH.'forms/uploader.php');
+		include(BBPATTACHMENTS_PATH.'forms/uploader.php');
 	}
 }

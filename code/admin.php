@@ -28,7 +28,7 @@ class GDATTAdmin {
 		}
 
 		if ($this->admin_plugin) {
-			wp_enqueue_style('gd-bbpress-attachments', GDBBPRESSATTACHMENTS_URL."css/admin.css", array(), null);
+			wp_enqueue_style('gd-bbpress-attachments', BBPATTACHMENTS_URL."css/admin.css", array(), null);
 		}
 	}
 
@@ -53,6 +53,6 @@ class GDATTAdmin {
 		$options = GDATTCore::instance()->o;
 		$_user_roles = d4p_bbpress_get_user_roles();
 
-		include(GDBBPRESSATTACHMENTS_PATH.'forms/panels.php');
+		include(BBPATTACHMENTS_PATH.'forms/panels.php');
 	}
 }
